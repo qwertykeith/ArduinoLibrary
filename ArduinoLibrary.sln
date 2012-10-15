@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoLibrary", "ArduinoLibrary\ArduinoLibrary.csproj", "{F9CF27B6-7340-4D26-8375-C16D5B10EB63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoLibrary.SketchUploader", "ArduinoLibrary.SketchUploader\ArduinoLibrary.SketchUploader.csproj", "{7826A793-5610-4EDB-BCB1-CC9D8995BC43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoUploadTest", "ArduinoUploadTest\ArduinoUploadTest.csproj", "{306E9F8A-E4FC-4E77-AEA4-A992BC3775BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9CF27B6-7340-4D26-8375-C16D5B10EB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9CF27B6-7340-4D26-8375-C16D5B10EB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9CF27B6-7340-4D26-8375-C16D5B10EB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9CF27B6-7340-4D26-8375-C16D5B10EB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7826A793-5610-4EDB-BCB1-CC9D8995BC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7826A793-5610-4EDB-BCB1-CC9D8995BC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7826A793-5610-4EDB-BCB1-CC9D8995BC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7826A793-5610-4EDB-BCB1-CC9D8995BC43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306E9F8A-E4FC-4E77-AEA4-A992BC3775BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306E9F8A-E4FC-4E77-AEA4-A992BC3775BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306E9F8A-E4FC-4E77-AEA4-A992BC3775BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306E9F8A-E4FC-4E77-AEA4-A992BC3775BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

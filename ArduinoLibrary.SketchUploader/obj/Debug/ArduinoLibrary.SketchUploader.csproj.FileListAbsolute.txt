@@ -1,0 +1,14 @@
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.SketchUploader.dll
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.SketchUploader.pdb
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.dll
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.pdb
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary.SketchUploader\obj\Debug\ArduinoLibrary.SketchUploader.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary.SketchUploader\obj\Debug\ArduinoLibrary.SketchUploader.dll
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary.SketchUploader\obj\Debug\ArduinoLibrary.SketchUploader.pdb
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.SketchUploader.dll
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.SketchUploader.pdb
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.dll
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary.SketchUploader\bin\Debug\ArduinoLibrary.pdb
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary.SketchUploader\obj\Debug\ArduinoLibrary.SketchUploader.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary.SketchUploader\obj\Debug\ArduinoLibrary.SketchUploader.dll
+C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary.SketchUploader\obj\Debug\ArduinoLibrary.SketchUploader.pdb
