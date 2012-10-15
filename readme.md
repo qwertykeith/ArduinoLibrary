@@ -1,6 +1,6 @@
-# ![ArduinoLibrary]
+# An ArduinoLibrary
 
-## c# library to send messages to arduino pins with actuators attached
+A C# library to send messages to arduino pins with actuators attached
 
 This is a library of classes to hopefully make it easy to communicate with an arduino via usb.  It was originally developed for a much larger project involving an event library controlling arduino drummers (which i will put on GitHub soon).
 
@@ -14,13 +14,13 @@ Some examples of this being used to power a robbot drummer are on this [youtube 
 
 ## Code Description
 
-# ArduinoLibrary
+### ArduinoLibrary
 
 Classes to help connect and send messages.  You must define a device, it's pin configurations and the actuators attached to the pins.  There is also some players which help to sent messages with turn a pin off after a certain amount of time.
 
 Probably stepping through the test project is the best way to understand.
 
-# ArduinoLibrary.SketchUploader
+### ArduinoLibrary.SketchUploader
 
 Classes used to compile and upload sketch style code to the arduino
 
@@ -35,7 +35,7 @@ Thanks to Sittipong Jansom http://arduinosketch.codeplex.com/ for some bits of c
 
 PLEASE NOTE: this has only been tested on an atmega2560 so far but it should work with any arduino device that is listed in the arduino boards.txt
 
-# ArduinoUploadTest
+### ArduinoUploadTest
 
 I'm not really sure how to unit test something easily that is so dependant on physical outputs, so this file contains two tests.
 
