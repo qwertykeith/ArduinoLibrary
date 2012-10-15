@@ -1,4 +1,4 @@
-# An ArduinoLibrary
+# ArduinoLibrary
 
 ###A C# library to use in projects that need to send messages to arduino pins with actuators attached, eg: relays, solenoids etc
 
