@@ -3,6 +3,7 @@ using ArduinoLibrary.SketchUploader;
 using ArduinoUploadTest.Tests;
 using System;
 using System.Linq;
+using System.Threading;
 
 namespace ArduinoUploadTest
 {
@@ -17,9 +18,11 @@ namespace ArduinoUploadTest
 
             // descript the arduino
             a = new ArduinoConnection();
+            // just use the last com port for this.. that one's usually the one
             a.PortName = ArduinoConnection.GetAvailablePorts().Last();
 
-            // creae the uploader
+            // create the uploader
+            // this is where the root of the ardiono ide installation lives
             var root = @"C:\Users\Administrator\Documents\Software\arduino-1.0.1";
             var tempDir = Environment.CurrentDirectory + "/Temp";
 
@@ -34,7 +37,8 @@ namespace ArduinoUploadTest
 
             // do some tests
             runTest(new TestBlink(a, u));
-//            runTest(new TestSendOnOffMessage(a, u));
+            Thread.Sleep(4000);
+            runTest(new TestSendOnOffMessage(a, u));
         }
 
 

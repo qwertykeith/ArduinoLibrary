@@ -52,7 +52,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ArduinoLibrary\ArduinoLibrary.csproj">
       <Project>{f9cf27b6-7340-4d26-8375-c16d5b10eb63}</Project>
-      <Name>ArduinoLibrary %28Arduino\ArduinoLibrary\ArduinoLibrary%29</Name>
+      <Name>ArduinoLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
