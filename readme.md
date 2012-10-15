@@ -18,13 +18,13 @@ Some examples of this being used to power a robotic drummer are on this [youtube
 
 Connects to an adruino and sends messages.  You must define a device, its pin configurations and the actuators attached to the pins.  
 
-Since this is mainly to be used to control percussion, there are some players included to help to send messages which will switch a pin off after a delay.
+Since this is mainly to be used to control percussion, there are some players included to help to send messages which will take care of switching a pin off for you after a particular amount of milliseconds.
 
 Probably stepping through the test project is the best way to understand how to use the library.
 
 ### ArduinoLibrary.SketchUploader
 
-Used to compile and upload sketch style code to the arduino
+Compiles and upload sketch style code to the arduino via code, so that you can automate uploading of generated arduino sketches.
 
 This has a dependancy on having the arduino v1.01 software installed
 http://arduino.googlecode.com/files/arduino-1.0.1-windows.zip
@@ -47,4 +47,5 @@ The first test uploads some code to make the LED blink.  The second uploads some
 
 BSD License  
 http://www.gnu.org/licenses/gpl.html
+
 Copyright (c) Keith Urquhart
