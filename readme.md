@@ -39,7 +39,7 @@ PLEASE NOTE: this has only been tested on an atmega2560 so far but it should wor
 
 ### ArduinoUploadTest
 
-I'm not really sure how to unit test something easily that is so dependant on physical outputs, so this file contains two tests that should directly test an adruino.
+I'm not really sure how to unit test something easily that is so dependant on physical outputs, so this file contains two tests that should directly test an adruino in real time.
 
 The first test uploads some code to make the LED blink.  The second uploads some interactive code and then send a few pin events out to the device.  You might need to change the location of your arduino IDE installation and the com port that the device uses.
 
