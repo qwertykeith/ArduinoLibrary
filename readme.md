@@ -2,7 +2,7 @@
 
 ###A C# library to use in projects that need to send messages to arduino pins with actuators attached, eg: relays, solenoids etc
 
-This is a library of classes to hopefully make it easy to communicate with an arduino via usb.  It was originally developed for a much larger project involving an event library controlling arduino drummers (which i will put on GitHub soon).
+This is a library of classes for programmers to make it easy to communicate with an arduino in real time via usb.  It was originally developed for a much larger project involving an event library controlling arduino drummers (which i will put on GitHub soon).
 
 The code includes a test console application to demonstrate how to set up and arduino connection, upload code and then send pin messages to control some kind of actuator.
 

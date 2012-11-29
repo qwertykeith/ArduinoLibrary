@@ -24,7 +24,7 @@ namespace ArduinoLibrary.SketchUploader
     /// </summary>
     public class Uploader
     {
-
+        bool hasError = false;
 
         static BoardsInfo getBoards(string arduinoSoftwareRoorDir)
         {
@@ -38,6 +38,7 @@ namespace ArduinoLibrary.SketchUploader
 
         public static IEnumerable<string> GetBoardNames(string arduinoSoftwareRoorDir)
         {
+            if (!Directory.Exists(arduinoSoftwareRoorDir)) return Enumerable.Empty<string>();
             return getBoards(arduinoSoftwareRoorDir).Select(p => p.Name);
 
         }
@@ -83,6 +84,7 @@ namespace ArduinoLibrary.SketchUploader
 
         public void UploadCode(ArduinoConnection con, string code)
         {
+            hasError = false;
             // close the arduino if it was open
             bool wasOpen = con.IsConnected;
             if (wasOpen)
@@ -103,10 +105,13 @@ namespace ArduinoLibrary.SketchUploader
                 // need to compile it first
                 c.Compile(code);
 
-                // upload sketch 
-                message("Uploading to device via " + con.PortName);
+                if (!hasError)
+                {
+                    // upload sketch 
+                    message("Uploading to device via " + con.PortName);
 
-                DoUpload(con);
+                    doUpload(con);
+                }
 
             }
             catch (Exception ex)
@@ -124,15 +129,18 @@ namespace ArduinoLibrary.SketchUploader
                 // open the connection again if needed
                 if (wasOpen)
                 {
-                    message("Re-opening ardiono connection");
+                    message("Re-opening arduino connection");
                     con.OpenConnection();
                 }
             }
 
-            if (OnSuccess != null) OnSuccess(this, null);
+            if (!hasError)
+            {
+                if (OnSuccess != null) OnSuccess(this, null);
+            }
         }
 
-        void DoUpload(ArduinoConnection con)
+        void doUpload(ArduinoConnection con)
         {
             string _fileName = "";
 
@@ -174,6 +182,7 @@ namespace ArduinoLibrary.SketchUploader
         {
             message("Error compiling!");
             if (OnError != null) OnError(this, null);
+            hasError = true;
         }
 
     }

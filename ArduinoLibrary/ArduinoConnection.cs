@@ -19,6 +19,7 @@ namespace ArduinoLibrary
 
         public event EventHandler OnConnected;
         public event EventHandler OnConnectError;
+        public event EventHandler OnConnecting;
         public event EventHandler OnDisconnected;
         public event EventHandler OnDisconnecting;
 
@@ -82,6 +83,8 @@ namespace ArduinoLibrary
                 {
                     //                if ((PortName ?? "") == "") PortName = AvailablePorts().Last();
 
+                    if (OnConnecting != null) OnConnecting(this, null);
+                    
                     System.Diagnostics.Debug.WriteLine("port: " + PortName);
                     port = new SerialPort(PortName, BaudRate);
                     port.ErrorReceived += new SerialErrorReceivedEventHandler(port_ErrorReceived);

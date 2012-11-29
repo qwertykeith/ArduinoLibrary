@@ -21,10 +21,21 @@ namespace ArduinoLibrary.SketchUploader
 
         public string Message { get; set; }
 
+        bool errorOccurred = false;
+
+
         void message(string m)
         {
             Message = m;
             if (OnMessage != null) OnMessage(this, null);
+        }
+
+        void error(Exception e)
+        {
+            message(e.Message);
+            if (e.InnerException != null) message(e.InnerException.Message);
+            if (OnError != null) OnError(this, null);
+            errorOccurred = true;
         }
 
         string runProcess(string filename, string arguments, bool stopOnMessage)
@@ -45,23 +56,25 @@ namespace ArduinoLibrary.SketchUploader
 
         public void Compile(string code)
         {
+            errorOccurred = false;
             message("Compiling");
             try
             {
                 // make the temp directory to put all this stuff in
                 if (!Directory.Exists(info.TempDir)) Directory.CreateDirectory(info.TempDir);
+                if (!Directory.Exists(info.TempDir)) message("hmmm.. can't create temp directory");
 
                 // compile sketch 
                 compile(code);
 
-                if (OnSuccess != null) OnSuccess(this, null);
+                if (!errorOccurred && (OnSuccess != null)) OnSuccess(this, null);
             }
             catch (Exception ex)
             {
-                message("Error compiling! " + ex.Message);
-                if (OnError != null) OnError(this, null);
+                message("Error compiling! ");
+                error(ex);
             }
-            message("Finished compiling");
+            if (!errorOccurred) message("Finished compiling");
         }
 
         void compile(string code)
@@ -88,30 +101,41 @@ namespace ArduinoLibrary.SketchUploader
             {
                 message("gpp " + cppFile.Name);
                 var objFileName = cppFile.FullName + ".o";
-                runProcess(info.Gpp, StringConst.BuildSketchCommand(new object[] { info.Board.Mcu, info.Board.FCpu, includeDirArgs, cppFile.FullName, objFileName }), true);
+
+                try
+                {
+                    runProcess(info.Gpp, StringConst.BuildSketchCommand(new object[] { info.Board.Mcu, info.Board.FCpu, includeDirArgs, cppFile.FullName, objFileName }), true);
+                }
+                catch (Exception e)
+                {
+                    error(e);
+                }
                 objLinker.Append(objFileName + " ");
             }
 
-            // Compile custom library
-            compileLib(includeDirArgs, filesDir, includeFiles);
-            System.Threading.Thread.Sleep(1000);
+            if (!errorOccurred)
+            {
 
-            // Object linker
-            message("Linking " + cppFilename);
-            runProcess(info.Gcc, string.Format(StringConst.GPP_LINKER, new object[] { info.Board.Mcu, cppFilename, objLinker.ToString(), filesDir }), true);
+                // Compile custom library
+                compileLib(includeDirArgs, filesDir, includeFiles);
+                System.Threading.Thread.Sleep(1000);
 
-            // Create flash image .hex
-            message("Creating flash image");
-            runProcess(info.Objcp, string.Format(StringConst.CREATE_FLASH_IMAGE, new object[] { cppFilename, cppFilename }), true);
+                // Object linker
+                message("Linking " + cppFilename);
+                runProcess(info.Gcc, string.Format(StringConst.GPP_LINKER, new object[] { info.Board.Mcu, cppFilename, objLinker.ToString(), filesDir }), true);
 
-            message("Creating eeprom image");
-            // Create eeprom image .eep
-            runProcess(info.Objcp, string.Format(StringConst.CREATE_EEPROM_IMAGE, new object[] { cppFilename, cppFilename }), true);
+                // Create flash image .hex
+                message("Creating flash image");
+                runProcess(info.Objcp, string.Format(StringConst.CREATE_FLASH_IMAGE, new object[] { cppFilename, cppFilename }), true);
 
-            // Show flash image size
-            message("Computing image size");
-            runProcess(info.Avrsize, string.Format(StringConst.PRINT_SIZE, new object[] { info.Board.Mcu, cppFilename }), false);
+                message("Creating eeprom image");
+                // Create eeprom image .eep
+                runProcess(info.Objcp, string.Format(StringConst.CREATE_EEPROM_IMAGE, new object[] { cppFilename, cppFilename }), true);
 
+                // Show flash image size
+                message("Computing image size");
+                runProcess(info.Avrsize, string.Format(StringConst.PRINT_SIZE, new object[] { info.Board.Mcu, cppFilename }), false);
+            }
         }
 
         void compileLib(string strInclude, string applet, List<string> includeFiles)
@@ -164,7 +188,7 @@ namespace ArduinoLibrary.SketchUploader
 
             var libraryDirs = new DirectoryInfo(info.ArduinoLibDirectory).GetDirectories();
             FileInfo[] libFiles = null;
-            var  objFileName = "";
+            var objFileName = "";
             var libDirInfos = new List<DirectoryInfo>();
             foreach (var dir in libraryDirs)
             {
