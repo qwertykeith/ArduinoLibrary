@@ -16,3 +16,12 @@ C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoUploadTest\
 C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoUploadTest\obj\Debug\ArduinoUploadTest.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoUploadTest\obj\Debug\ArduinoUploadTest.exe
 C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoUploadTest\obj\Debug\ArduinoUploadTest.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\bin\Debug\ArduinoUploadTest.exe
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\bin\Debug\ArduinoUploadTest.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\bin\Debug\ArduinoLibrary.dll
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\bin\Debug\ArduinoLibrary.SketchUploader.dll
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\bin\Debug\ArduinoLibrary.SketchUploader.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\bin\Debug\ArduinoLibrary.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\obj\Debug\ArduinoUploadTest.csprojResolveAssemblyReference.cache
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\obj\Debug\ArduinoUploadTest.exe
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoUploadTest\obj\Debug\ArduinoUploadTest.pdb

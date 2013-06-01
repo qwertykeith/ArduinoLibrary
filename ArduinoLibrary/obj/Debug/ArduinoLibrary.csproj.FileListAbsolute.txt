@@ -7,3 +7,8 @@ C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary\bin
 C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary\bin\Debug\ArduinoLibrary.pdb
 C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary\obj\Debug\ArduinoLibrary.dll
 C:\Users\Administrator\Documents\Web\KProjects\ArduinoLibrary\ArduinoLibrary\obj\Debug\ArduinoLibrary.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoLibrary\bin\Debug\ArduinoLibrary.dll
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoLibrary\bin\Debug\ArduinoLibrary.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoLibrary\obj\Debug\ArduinoLibrary.csprojResolveAssemblyReference.cache
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoLibrary\obj\Debug\ArduinoLibrary.dll
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArduinoLibrary\obj\Debug\ArduinoLibrary.pdb
