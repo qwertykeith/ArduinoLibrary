@@ -16,6 +16,7 @@ namespace ArduinoUploadTest
         static void Main(string[] args)
         {
 
+
             // descript the arduino
             a = new ArduinoConnection();
             // just use the last com port for this.. that one's usually the one
