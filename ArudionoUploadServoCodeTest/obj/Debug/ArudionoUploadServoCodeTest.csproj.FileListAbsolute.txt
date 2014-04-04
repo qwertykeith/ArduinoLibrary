@@ -1,0 +1,9 @@
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\bin\Debug\ArudionoUploadServoCodeTest.exe
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\bin\Debug\ArudionoUploadServoCodeTest.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\bin\Debug\ArduinoLibrary.dll
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\bin\Debug\ArduinoLibrary.SketchUploader.dll
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\bin\Debug\ArduinoLibrary.SketchUploader.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\bin\Debug\ArduinoLibrary.pdb
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\obj\Debug\ArudionoUploadServoCodeTest.csprojResolveAssemblyReference.cache
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\obj\Debug\ArudionoUploadServoCodeTest.exe
+C:\Users\keefzHP\Documents\web\KProjects\ArduinoLibrary\ArudionoUploadServoCodeTest\obj\Debug\ArudionoUploadServoCodeTest.pdb

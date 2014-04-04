@@ -93,7 +93,10 @@ namespace ArduinoLibrary.SketchUploader
 
             objLinker = new StringBuilder();
 
-            string includeDirArgs = "-I" + info.IncludeFiles + " -I" + info.VariantDir + " -I" + filesDir;
+            var includeDirArgs = string.Format("-I {0} -I {1} -I {2}   ", info.IncludeFiles, info.VariantDir, filesDir);
+
+            var includePaths = Directory.GetDirectories(info.IncludeLibrariesRootPath);
+            includeDirArgs += includePaths.Select(s => string.Format(" -I {0}", s)).Aggregate((a, b) => a + b);
 
             var cppFiles = new DirectoryInfo(filesDir).GetFiles().Where(p => p.Extension == ".cpp");
             //  Compile source file

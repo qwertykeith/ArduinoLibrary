@@ -1,25 +1,38 @@
 ﻿using ArduinoLibrary;
 using ArduinoLibrary.SketchUploader;
-using ArduinoUploadTest.Tests;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
+using System.Text;
 
-namespace ArduinoUploadTest
+namespace ArudionoUploadServoCodeTest
 {
     class Program
     {
-
         static ArduinoConnection a;
         static Uploader u;
 
+        const string code = @"
+                 #include <Servo.h> 
+                Servo myservo;  
+                void setup()
+                {
+                  Serial.begin(300); 
+                  myservo.attach(2);  // attaches the servo on pin 2 to the servo object 
+                  Serial.flush();
+                }
+
+                void loop()
+                {
+                 }
+            ";
+
+
         static void Main(string[] args)
         {
-
-
             // create the arduino connection
             a = new ArduinoConnection();
-            // just use the last com port for this.. that one's usually the one
+            // just use the last com port for this.. it's usually the one
             a.PortName = ArduinoConnection.GetAvailablePorts().Last();
 
             // create the uploader
@@ -36,18 +49,9 @@ namespace ArduinoUploadTest
             u.OnMessage += u_OnMessage;
             u.OnSuccess += u_OnSuccess;
 
-            // do some tests
-            runTest(new TestBlink(a, u));
-            Thread.Sleep(4000);
-            runTest(new TestSendOnOffMessage(a, u));
-        }
+            // upload code
+            u.UploadCode(a, code);
 
-
-        static void runTest(ITestThingy test)
-        {
-            test.Running = true;
-            test.Run();
-            while (test.Running) ;
         }
 
         static void u_OnSuccess(object sender, EventArgs e)
@@ -64,5 +68,7 @@ namespace ArduinoUploadTest
         {
             Console.WriteLine("Oops error!");
         }
+
     }
 }
+

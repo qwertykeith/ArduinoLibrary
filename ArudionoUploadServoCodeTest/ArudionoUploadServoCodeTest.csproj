@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{306E9F8A-E4FC-4E77-AEA4-A992BC3775BE}</ProjectGuid>
+    <ProjectGuid>{428C26EA-A5D6-4A1C-A5DC-10FCF69E122E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ArduinoUploadTest</RootNamespace>
-    <AssemblyName>ArduinoUploadTest</AssemblyName>
+    <RootNamespace>ArudionoUploadServoCodeTest</RootNamespace>
+    <AssemblyName>ArudionoUploadServoCodeTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,11 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITestThingy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\TestBlink.cs" />
-    <Compile Include="Tests\TestSendOnOffMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ArduinoLibrary.SketchUploader\ArduinoLibrary.SketchUploader.csproj">

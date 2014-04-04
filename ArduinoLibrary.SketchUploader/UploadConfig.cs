@@ -36,6 +36,7 @@ namespace ArduinoLibrary.SketchUploader
         public string Avrsize { get { return ArduinoDirectory + @"\hardware\tools\avr\bin\avr-size"; } }
         public string ArduCore { get { return ArduinoDirectory + @"\hardware\arduino\cores\" + Board.Core; } }
         public string IncludeFiles { get { return ArduinoDirectory + @"\hardware\arduino\cores\" + Board.Core; } }
+        public string IncludeLibrariesRootPath { get { return ArduinoDirectory + @"\libraries\"; } }
         public string VariantDir { get { return ArduinoDirectory + @"\hardware\arduino\variants\" + Board.Variant; } }
 
         public CommunicationTypeEnum Communication { get; set; }
